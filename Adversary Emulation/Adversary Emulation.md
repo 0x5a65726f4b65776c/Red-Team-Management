@@ -20,7 +20,7 @@ ATT&CK is updated on a regular release cadence, with tactics, techniques, and su
 
 by Scythe
 
-*Note: SCYTHE was acquired by ExtraHop in 2023. The platform and links below may have changed as a result, but the PTEF methodology described here remains valid.*
+*Note: SCYTHE remains an independently operated company. Links below can still age like any external URL — verify before relying on them.*
 
 ## Adversary Emulation Plan
 
