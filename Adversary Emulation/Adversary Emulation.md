@@ -16,7 +16,11 @@ Successful adversary emulation is a collaborative effort between multiple cybers
 
 Previously, the synthesis of CTI and red teaming was more challenging due to a lack of readily available data and a consistent way to share information. In 2016, the MITRE Corporation released the very first version of ATT&CK, a framework which served as a foundation for information sharing related to adversary behaviors. ATT&CK’s success is driven by the community contributions of organizations world-wide, enabling adversary data coverage unlike anything previously seen. The tactics and techniques in ATT&CK have been identified in real world intrusions, making them ideal candidates for emulations. New adversary campaigns can be mapped to ATT&CK and shared so that others can emulate adversaries of interest to their organization.
 
+ATT&CK is updated on a regular release cadence, with tactics, techniques, and sub-techniques added or revised over time — always check the current release at https://attack.mitre.org/resources/updates/ rather than relying on a fixed version number.
+
 by Scythe
+
+*Note: SCYTHE was acquired by ExtraHop in 2023. The platform and links below may have changed as a result, but the PTEF methodology described here remains valid.*
 
 ## Adversary Emulation Plan
 
@@ -33,11 +37,26 @@ by Mitre Att&ck
 |Stratus Red Team|Stratus Red Team is "Atomic Red Team™" for the cloud, allowing to emulate offensive attack techniques in a granular and self-contained manner.|https://github.com/DataDog/stratus-red-team|
 |Prelude Operator|A Platform for Developer-first advanced security· Defend your organization by mimicking real adversarial attacks.|https://www.prelude.org/|
 |Caldera|An automated adversary emulation system that performs post-compromise adversarial behavior within Windows Enterprise networks.|https://github.com/mitre/caldera|
+|AttackIQ|A commercial breach-and-attack-simulation platform for continuously validating security controls against adversary TTPs mapped to ATT&CK.|https://www.attackiq.com/|
 |APTSimulator|A Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised.|https://github.com/NextronSystems/APTSimulator|
 |Atomic Red Team|Small and highly portable detection tests mapped to the Mitre ATT&CK Framework.|https://github.com/redcanaryco/atomic-red-team|
 |Network Flight Simulator|flightsim is a lightweight utility used to generate malicious network traffic and help security teams to evaluate security controls and network visibility.|https://github.com/alphasoc/flightsim|
 |Metta|A security preparedness tool to do adversarial simulation.|https://github.com/uber-common/metta|
 |Red Team Automation (RTA)| RTA provides a framework of scripts designed to allow blue teams to test their detection capabilities against malicious tradecraft, modeled after MITRE ATT&CK.|https://github.com/endgameinc/RTA|
+
+### AI/LLM Red Teaming
+
+As organizations adopt LLM and generative AI features, adversary emulation needs to extend to that attack surface as well.
+
+|Name|Description|URL|
+|-----|-----------|----|
+|PyRIT|Microsoft's Python Risk Identification Tool for generative AI — automates probing of LLM endpoints for jailbreaks, harmful content, and other failure modes.|https://github.com/Azure/PyRIT|
+|garak|An open-source LLM vulnerability scanner that probes models for prompt injection, jailbreaks, data leakage, and other weaknesses.|https://github.com/leondz/garak|
+|Promptfoo (redteam)|Promptfoo's redteam module generates and runs adversarial prompts against an LLM app to test for jailbreaks, injection, and policy violations.|https://www.promptfoo.dev/docs/red-team/|
+
+Use the current [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) to scope engagements against LLM-integrated targets.
+
+**Operational caution:** testing against cloud-hosted LLM APIs (OpenAI, Anthropic, etc.) means target-organization data may transit a third-party API during the engagement. ROE and data-handling agreements must explicitly cover this before testing begins. Prefer isolated or locally-hosted models when testing sensitive targets.
 
 ## Staging
 
